@@ -1,0 +1,100 @@
+.sidebar {
+    width: 300px;
+    min-width: 300px;
+    background: rgb(26, 28, 30);
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    color: #c2bcb4;
+}
+.sidebar-content {
+    position: fixed;
+    width: inherit;
+}
+.sidebar .user {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 40px 30px;
+    border-bottom: 1px solid rgb(104, 10, 183);
+}
+.sidebar .links {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+.sidebar .links li {
+    margin-top: 10px;
+}
+.sidebar .links a {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+    color: #9b968e;
+    box-sizing: border-box;
+}
+.sidebar .links img {
+    margin-right: 10px;
+    filter: invert(50%);
+}
+.sidebar .links a.active {
+    /*--border-radius: 1rem;*/
+    color: #c4bebe;
+    background: var(--bg-color);
+    border: 1px solid #680ab7;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    /*transform: skewX(-20deg);*/
+    position: relative;
+}
+
+.sidebar .links a.active::before,
+.sidebar .links a.active::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    right: 0;
+    /*background: red;*/
+}
+.sidebar .links a.active::before {
+    top: -16px;
+    border-radius: 0 0 16px 0;
+    box-shadow: 5px 5px 0 5px var(--bg-color);
+    border: 1px solid #680ab7;
+    border-top: none;
+    border-left: none;
+}
+.sidebar .links a.active::after{
+    bottom: -16px;
+    border-radius: 0 16px 0 0;
+    box-shadow: 5px -5px 0 5px var(--bg-color);
+    border: 1px solid #680ab7;
+    border-bottom: none;
+    border-left: none;
+}
+
+.sidebar .links .active img {
+    filter: invert(90%);
+}
+
+/* avatar in sidebar */
+.sidebar .user .avatar {
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #680ab7;
+}
+
+.user .online-user {
+    position: absolute;
+    display: inline-block;
+    margin-left: -13px;
+    width: 14px;
+    height: 14px;
+    background: #0ebb50;
+    border-radius: 50%;
+    margin-top: 52px;
+
+}
